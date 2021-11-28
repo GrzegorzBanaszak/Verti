@@ -1,0 +1,59 @@
+.open{
+    margin: 1em 0.5em 0 0.5em;
+    background: $open-bg;
+    padding: 1em;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.open-title{
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.open-description {
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.open-btn{
+    display: block;
+    background: $btn-bg;
+    padding: 1em ;
+    margin-bottom: 0.4em;
+    border-radius: 5px;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    span{
+        margin-right: 0.3em;
+    }
+    &:hover{
+        background: $hover-btn-bg;
+        color: $hover-btn-color;
+    }
+}
+
+@media screen and (min-width:$desktop) {
+    .open{
+        @include container;
+        padding: 2em 1.2em;
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .open-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    
+}
+

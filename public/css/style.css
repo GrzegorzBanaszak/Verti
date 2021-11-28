@@ -252,6 +252,8 @@ table {
 }
 
 .header {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -327,12 +329,13 @@ table {
 }
 
 .header-btn:checked ~ .header-menu {
-  height: 100%;
+  height: 272px;
 }
 
 .header-menu {
   height: 0;
   overflow: hidden;
+  transition: all 0.6s ease-in-out;
 }
 
 .header-element {
@@ -353,6 +356,62 @@ table {
   color: #696969;
 }
 
+.open {
+  margin: 1em 0.5em 0 0.5em;
+  background: white;
+  padding: 1em;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.open-title {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+.open-description {
+  font-size: 1.6em;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+.open-btn {
+  display: block;
+  background: #f2f2f2;
+  padding: 1em;
+  margin-bottom: 0.4em;
+  border-radius: 5px;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.open-btn span {
+  margin-right: 0.3em;
+}
+.open-btn:hover {
+  background: #0090c5;
+  color: white;
+}
+
+@media screen and (min-width: 1000px) {
+  .open {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2em 1.2em;
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .open-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 body {
   background: #E4E4E4;
   color: #444444;
