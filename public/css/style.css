@@ -369,7 +369,7 @@ table {
   }
 
   .header-logo {
-    margin: 0.5em auto 0 0.5em;
+    margin: 0.5em auto 0 0.2em;
   }
 
   .header-element {
@@ -433,9 +433,9 @@ table {
 
   .open-text {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: left;
   }
 }
 body {
