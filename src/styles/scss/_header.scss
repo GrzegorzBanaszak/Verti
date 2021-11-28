@@ -1,16 +1,19 @@
 .header{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .header-logo{
-    margin-top: 1em;
-    padding: 0.1em 0.2em;
+    padding: 0.2em 0.2em;
     border-radius: 0.2em;
+    font-size: 2em;
     text-align: center;
     color: white;
-    font-style: italic;
-    background: rgb(242, 62, 92);
+    font-family: 'Oleo Script',
+    cursive;
+    background: $logo-bg-color;
+    margin-left:auto ;
+    margin-right: auto;
 }
 
 .header-btn{
@@ -18,15 +21,16 @@
 }
 
 .header-icon{
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: inline-block;
     cursor: pointer;
-    padding: 28px 20px;
+    padding: 1em 1em;
+    border-radius: 5px;
+    background: $header-icon-bg;
+    margin: 5px auto 0 5px ;
 }
 
 .header-icon .navicon{
- background: #333;
+ background: $navicon-bg;
  display: block;
  height: 2px;
  position: relative;
@@ -36,7 +40,7 @@
 
 .header-icon .navicon:before,
 .header-icon .navicon:after {
-    background: #333;
+    background: $navicon-bg;
     content: '';
     display: block;
     height: 100%;
@@ -51,4 +55,49 @@
 
 .header-icon .navicon:after {
     top: -5px;
+}
+
+.header-btn:checked ~ .header-icon .navicon{
+    background: transparent;
+}
+
+.header-btn:checked~.header-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header-btn:checked~.header-icon .navicon::after {
+    transform: rotate(45deg);
+}
+
+.header-btn:checked~.header-icon:not(.steps) .navicon:before,
+.header-btn:checked~.header-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+.header-btn:checked ~ .header-menu{
+    height: 100%;
+}
+
+.header-menu{
+    height: 0;
+    overflow: hidden;
+}
+
+
+.header-element{
+    margin-top: 1em;
+    padding: 0.6em;
+    &:hover{
+        background: $nav-link-bg;
+    }
+    &:hover .header-link{
+        color: white;
+    }
+}
+
+.header-link{
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: $nav-link-color;
 }

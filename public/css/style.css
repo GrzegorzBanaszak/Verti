@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -252,17 +253,19 @@ table {
 
 .header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .header-logo {
-  margin-top: 1em;
-  padding: 0.1em 0.2em;
+  padding: 0.2em 0.2em;
   border-radius: 0.2em;
+  font-size: 2em;
   text-align: center;
   color: white;
-  font-style: italic;
-  background: #f23e5c;
+  font-family: "Oleo Script", cursive;
+  background: #fc4887;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header-btn {
@@ -270,15 +273,16 @@ table {
 }
 
 .header-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: inline-block;
   cursor: pointer;
-  padding: 28px 20px;
+  padding: 1em 1em;
+  border-radius: 5px;
+  background: #bdbdbd;
+  margin: 5px auto 0 5px;
 }
 
 .header-icon .navicon {
-  background: #333;
+  background: #efefef;
   display: block;
   height: 2px;
   position: relative;
@@ -288,7 +292,7 @@ table {
 
 .header-icon .navicon:before,
 .header-icon .navicon:after {
-  background: #333;
+  background: #efefef;
   content: "";
   display: block;
   height: 100%;
@@ -303,6 +307,50 @@ table {
 
 .header-icon .navicon:after {
   top: -5px;
+}
+
+.header-btn:checked ~ .header-icon .navicon {
+  background: transparent;
+}
+
+.header-btn:checked ~ .header-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header-btn:checked ~ .header-icon .navicon::after {
+  transform: rotate(45deg);
+}
+
+.header-btn:checked ~ .header-icon:not(.steps) .navicon:before,
+.header-btn:checked ~ .header-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.header-btn:checked ~ .header-menu {
+  height: 100%;
+}
+
+.header-menu {
+  height: 0;
+  overflow: hidden;
+}
+
+.header-element {
+  margin-top: 1em;
+  padding: 0.6em;
+}
+.header-element:hover {
+  background: #444444;
+}
+.header-element:hover .header-link {
+  color: white;
+}
+
+.header-link {
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #696969;
 }
 
 body {
