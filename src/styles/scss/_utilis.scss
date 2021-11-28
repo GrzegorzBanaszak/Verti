@@ -22,7 +22,6 @@
 }
 
 @mixin about-position {
-    width: 80%;
     padding: 2.2em 0;
-    margin: 0 auto;
+    margin: 0 $mobile-margin;
 }

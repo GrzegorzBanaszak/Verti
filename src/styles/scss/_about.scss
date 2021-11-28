@@ -11,6 +11,7 @@
     @include about-position;
     line-height: 2em;
     font-weight: 300;
+    border-bottom: 2px solid #e7e7e7;
     b{
         font-weight: 600;
     }
@@ -27,7 +28,6 @@
         text-align: center;
         margin: 1em 0;
     } 
-    border-bottom: 2px solid #e7e7e7;
 }
 
 .about-interesting{
@@ -60,14 +60,13 @@
     }
     .about-interesting {
         width: 40%;
-        padding: 3em;
         .interesting-btn{
-            width: 40%;
+            float: left;
         }
     }
     .about-content{
         .content-btn {
-            width: 40%;
+            float: left;
             padding: 0.7em 1em;
         }
     }

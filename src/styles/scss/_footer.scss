@@ -1,0 +1,70 @@
+.footer-container {
+    @include container;
+}
+
+.footer-random{
+    margin: 2em;
+    border-bottom: 3px solid #cccccc;
+    padding-bottom: 2em;
+    .random-title{
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 1.4em;
+    }
+    .random-list{
+        color: 696969;
+        font-size: 1.2em;
+        text-decoration: underline;
+        li{
+            margin-bottom: 0.7em;
+        }
+    }
+}
+
+.footer-contact {
+    margin: 2em;
+    border-bottom: 3px solid #cccccc;
+    padding-bottom: 2em;
+    .contact-title {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 1.4em;
+    }
+
+    .contact-icons{
+        margin-bottom: 2em;
+        span{
+            display: inline-block;
+            margin-right: 0.2em;
+            background: $font-primary;
+            color: $bg-primary;
+            padding: 0.3em;
+            font-size: 1.5em;
+            border-radius: 10px;
+        }
+    }
+
+    .contact-list {
+        color: 696969;
+        font-size: 1.2em;
+        text-decoration: underline;
+
+        li {
+            margin-bottom: 0.7em;
+        }
+    }
+}
+@include desktop{
+    .footer-container{
+        padding-top: 3em;
+        display: flex;
+    }
+    .footer-random{
+        width: 25%;
+        border: none;
+    }
+    .footer-contact{
+        width: 25%;
+        border: none;
+    }
+}
