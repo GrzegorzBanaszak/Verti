@@ -89,6 +89,7 @@
 .header-element{
     margin-top: 1em;
     padding: 0.6em;
+    transition: all 0.4s ease-in-out;
     &:hover{
         background: $nav-link-bg;
     }
@@ -102,4 +103,26 @@
     font-size: 1.2em;
     font-weight: 600;
     color: $nav-link-color;
+}
+
+@media screen and (min-width:$desktop) {
+    .header-icon{
+        display: none;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .header-logo{
+        margin: 0.5em auto 0 0.5em;
+    }
+    .header-element{
+        border-radius: 5px;
+        margin-right: 0.5em;
+    }
+    .header-menu{
+        display: flex;
+        height: auto;
+    }
 }
