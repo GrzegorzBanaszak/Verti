@@ -1,0 +1,76 @@
+.about{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.about-container{
+    @include container;
+}
+
+.about-content{
+    @include about-position;
+    line-height: 2em;
+    font-weight: 300;
+    b{
+        font-weight: 600;
+    }
+    .content-title{
+        font-size: 2em;
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+    .content-description{
+      margin-bottom: 2em; 
+    }
+    .content-btn{
+        @include btn($hover-btn-bg,$hover-btn-color);
+        text-align: center;
+        margin: 1em 0;
+    } 
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.about-interesting{
+    @include about-position;
+    img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .interesting-images{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6em;
+    }
+    .interesting-btn{
+        @include btn($hover-btn-bg, $hover-btn-color);
+        text-align: center;
+        margin: 1.2em 0;
+    }
+    .interesting-title{
+        margin-bottom: 1em;
+        font-size: 1.3em;
+        font-weight: 700;
+    }
+}
+
+@include desktop{
+    .about-container{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .about-interesting {
+        width: 40%;
+        padding: 3em;
+        .interesting-btn{
+            width: 40%;
+        }
+    }
+    .about-content{
+        .content-btn {
+            width: 40%;
+            padding: 0.7em 1em;
+        }
+    }
+
+
+}
