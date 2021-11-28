@@ -1,0 +1,28 @@
+{
+  "name": "verti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.42.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrzegorzBanaszak/Verti.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrzegorzBanaszak/Verti/issues"
+  },
+  "homepage": "https://github.com/GrzegorzBanaszak/Verti#readme"
+}
